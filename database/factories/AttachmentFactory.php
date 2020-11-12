@@ -1,5 +1,7 @@
 <?php
 
+//JACQUENOD Steven B2A
+
 namespace Database\Factories;
 
 use App\Models\Attachment;
@@ -9,20 +11,11 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 
 class AttachmentFactory extends Factory
 {
-    /**
-     * The name of the factory's corresponding model.
-     *
-     * @var string
-     */
     protected $model = Attachment::class;
 
-    /**
-     * Define the model's default state.
-     *
-     * @return array
-     */
     public function definition()
     {
+        //Récupération des données de la table 'attachments'
         return [
             'file' => $this->faker->word,
             'filename' => $this->faker->text,

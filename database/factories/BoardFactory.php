@@ -1,5 +1,7 @@
 <?php
 
+//JACQUENOD Steven B2A
+
 namespace Database\Factories;
 
 use App\Models\Board;
@@ -10,20 +12,11 @@ use Faker\Generator as Faker;
 
 class BoardFactory extends Factory
 {
-    /**
-     * The name of the factory's corresponding model.
-     *
-     * @var string
-     */
     protected $model = Board::class;
 
-    /**
-     * Define the model's default state.
-     *
-     * @return array
-     */
     public function definition()
     {
+        //Récupération des données de la table 'boards'
         return [
             'title' => $this->faker->title,
             'description' => $this->faker->sentence,

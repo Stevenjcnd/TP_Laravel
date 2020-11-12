@@ -1,5 +1,7 @@
 <?php
 
+//JACQUENOD Steven B2A
+
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -11,11 +13,6 @@ class comment extends Model
 {
     use HasFactory;
 
-        /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
     public $text = [
         'text',
 
@@ -26,11 +23,13 @@ class comment extends Model
         'task_id',
     ];
 
+    //Relation belongs to avec 'user'
     public function User()
     {
         return $this -> belongsTo('App\Models\User');
     }
 
+    //Relation belongs to avec 'task'
     public function Task()
     {
         return $this->belongsTo(Task::class);

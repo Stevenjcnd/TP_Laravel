@@ -1,5 +1,7 @@
 <?php
 
+//JACQUENOD Steven B2A
+
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -11,11 +13,13 @@ class TaskUser extends Model
 {
     use HasFactory;
 
+    //Relation belongs to avec 'task'
     public function Task()
     {
         return $this -> belongsTo('App\Models\Task');
     }
 
+    //Relation belongs to avec 'user'
     public function User()
     {
         return $this -> belongsTo('App\Models\User');

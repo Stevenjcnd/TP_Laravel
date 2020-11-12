@@ -1,5 +1,7 @@
 <?php
 
+//JACQUENOD Steven B2A
+
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -10,20 +12,11 @@ class Category extends Model
 {
     use HasFactory;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
     protected $text = [
         'name',
     ];
 
-    /**
-     * Renvoi la liste des tâches possédant cette catégorie
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
+    //Relation has many avec 'task'
     public function Task()
     {
         return $this-> hasMany(Task::class);
